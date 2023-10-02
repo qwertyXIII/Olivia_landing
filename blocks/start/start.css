@@ -1,0 +1,9 @@
+.start {
+  height: 100vh;
+  background: url(../../images/background2.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}

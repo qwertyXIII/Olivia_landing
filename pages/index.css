@@ -1,0 +1,18 @@
+@import url(/vendor/normalise.css);
+@import url(/blocks/page/page.css);
+
+/*-------------=header=-------------*/
+@import url(/blocks/header/header.css);
+
+/*-------------=main=-------------*/
+@import url(/blocks/main/main.css);
+
+/*-------------=start=-------------*/
+@import url(/blocks/start/start.css);
+@import url(/blocks/start/__object/start__object.css);
+
+
+
+* {
+  outline: 1px 1px lime;
+}
