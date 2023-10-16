@@ -2,6 +2,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   width: 90%;
   height: max-content;
+  padding: 0 5px;
+  box-sizing: border-box;
   border-radius: 20px;
   display: grid; 
   grid-template-columns: 70px 1fr; 
@@ -13,4 +15,5 @@
   align-items: center;
   justify-items: center;
   margin: 10px 0;
+  text-decoration: none;
 }
