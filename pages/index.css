@@ -1,5 +1,5 @@
 @import url(../vendor/normalise.css);
-@import url(../blocks/page/page.css);
+@import url(../../blocks/page/page.css);
 
 /*-------------=main=-------------*/
 @import url(../blocks/main/main.css);
