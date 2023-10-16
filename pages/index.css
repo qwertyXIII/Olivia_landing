@@ -1,42 +1,42 @@
-@import url(./vendor/normalise.css);
-@import url(./blocks/page/page.css);
+@import url(Olivia_landing/vendor/normalise.css);
+@import url(Olivia_landing/blocks/page/page.css);
 
 /*-------------=main=-------------*/
-@import url(./blocks/main/main.css);
+@import url(Olivia_landing/blocks/main/main.css);
 
 /*-------------=all elements=-------------*/
-@import url(./blocks/button/button.css);
+@import url(Olivia_landing/blocks/button/button.css);
 
 /*----------.---=start=-------------*/
-@import url(./blocks/start/start.css);
-@import url(./blocks/start/__bg/start__bg.css);
-@import url(./blocks/start/__content/start__content.css);
-@import url(./blocks/start/__heading/start__heading.css);
-@import url(./blocks/start/__marquee/start__marquee.css);
+@import url(Olivia_landing/blocks/start/start.css);
+@import url(Olivia_landing/blocks/start/__bg/start__bg.css);
+@import url(Olivia_landing/blocks/start/__content/start__content.css);
+@import url(Olivia_landing/blocks/start/__heading/start__heading.css);
+@import url(Olivia_landing/blocks/start/__marquee/start__marquee.css);
 
 /*-------------=about=-------------*/
-@import url(./blocks/about/about.css);
-@import url(./blocks/about/__heading/about__heading.css);
-@import url(./blocks/about/__element/about__element.css);
-@import url(./blocks/about/__text/about__text.css);
-@import url(./blocks/about/__img/about__img.css);
+@import url(Olivia_landing/blocks/about/about.css);
+@import url(Olivia_landing/blocks/about/__heading/about__heading.css);
+@import url(Olivia_landing/blocks/about/__element/about__element.css);
+@import url(Olivia_landing/blocks/about/__text/about__text.css);
+@import url(Olivia_landing/blocks/about/__img/about__img.css);
 
 /*-------------=work=-------------*/
-@import url(./blocks/work/work.css);
-@import url(./blocks/work/__heading/work__heading.css);
-@import url(./blocks/work/__card/work__card.css);
-@import url(./blocks/work/__img/work__img.css);
-@import url(./blocks/work/__text/work__text.css);
+@import url(Olivia_landing/blocks/work/work.css);
+@import url(Olivia_landing/blocks/work/__heading/work__heading.css);
+@import url(Olivia_landing/blocks/work/__card/work__card.css);
+@import url(Olivia_landing/blocks/work/__img/work__img.css);
+@import url(Olivia_landing/blocks/work/__text/work__text.css);
 
 /*-------------=practices=-------------*/
-@import url(./blocks/practices/practices.css);
-@import url(./blocks/practices/__heading/practices__heading.css);
-@import url(./blocks/practices/__cards/practices__cards.css);
-@import url(./blocks/practices/__card/practices__card.css);
-@import url(./blocks/practices/__img/practices__img.css);
-@import url(./blocks/practices/__name/practices__name.css);
-@import url(./blocks/practices/__text/practices__text.css);
-@import url(./blocks/practices/__button/practices__button.css);
+@import url(Olivia_landing/blocks/practices/practices.css);
+@import url(Olivia_landing/blocks/practices/__heading/practices__heading.css);
+@import url(Olivia_landing/blocks/practices/__cards/practices__cards.css);
+@import url(Olivia_landing/blocks/practices/__card/practices__card.css);
+@import url(Olivia_landing/blocks/practices/__img/practices__img.css);
+@import url(Olivia_landing/blocks/practices/__name/practices__name.css);
+@import url(Olivia_landing/blocks/practices/__text/practices__text.css);
+@import url(Olivia_landing/blocks/practices/__button/practices__button.css);
 
 
 
@@ -48,3 +48,4 @@
 * {
   outline: 1px solid lime;
 }
+*/
