@@ -1,0 +1,7 @@
+.about__img {
+  position: absolute;
+  width: 120px;
+  bottom: 50%;
+  right: -10px;
+  transform: translate(0, 50%);
+}

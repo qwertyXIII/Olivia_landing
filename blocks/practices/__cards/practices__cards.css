@@ -1,0 +1,26 @@
+.practices__cards {
+  width: 100vw;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 0 10px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+
+.practices__cards::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.practices__cards::-webkit-scrollbar-track {
+  background: transparent;
+  background-color: transparent;
+}
+
+.practices__cards::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+} 
