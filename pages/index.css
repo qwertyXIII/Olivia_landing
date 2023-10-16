@@ -37,6 +37,19 @@
 @import url(../blocks/practices/__name/practices__name.css);
 @import url(../blocks/practices/__text/practices__text.css);
 @import url(../blocks/practices/__button/practices__button.css);
+@import url(../blocks/practices/__contact/practices__contact.css);
+
+/*-------------=contacts=-------------*/
+@import url(../blocks/contacts/contacts.css);
+@import url(../blocks/contacts/__heading/contacts__heading.css);
+@import url(../blocks/contacts/__img/contacts__img.css);
+@import url(../blocks/contacts/__plate/contacts__plate.css);
+@import url(../blocks/plcontactsate/__warning/contacts__warning.css);
+
+/*-------------=plate=-------------*/
+@import url(../blocks/plate/__icon/plate__icon.css);
+@import url(../blocks/plate/__text/plate__text.css);
+@import url(../blocks/plate/__subtext/plate__subtext.css);
 
 
 

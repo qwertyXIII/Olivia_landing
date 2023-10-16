@@ -1,0 +1,14 @@
+.practices__contact {
+  width: 90%;
+  height: 150px;
+  margin: 30px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-shrink: 0;
+}

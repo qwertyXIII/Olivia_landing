@@ -1,0 +1,6 @@
+.plate__subtext {
+  color: lightgray;
+  font-size: 15px;
+  grid-area: subtext;
+  margin: 0 0 10px 0;
+}
