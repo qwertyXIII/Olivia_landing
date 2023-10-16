@@ -141,14 +141,14 @@
         </div>
         <div class="practices__card">
           <img src="./images/elastic.png" class="practices__img">
-          <p class="practices__name">Еcstatic dance</p>
+          <p class="practices__name">Elastic dance</p>
           <p class="practices__text">танцевально-двигательная терапия</p>
           <button class="button">Записаться</button>
         </div>
       </div>
       <div class="practices__contact">
         <p class="practices__text">А если не знаете, куда пойти, нажмите кнопку и я вам позвоню</p>
-        <button class="practices__button button">Связаться</button>
+        <button class="practices__button not-know button">Связаться</button>
       </div>
     </section>
 
@@ -176,10 +176,26 @@
   </main>
 
   <footer class="footer">
+    <p class="author">Дизайн, код и некоторые элементы на сайте созданны <a href="https://t.me/dxiii_tg" class="author__link" target="_blank">этим разработчиком</a></p>
   </footer>
+
+  <div class="popup popup_closed">
+    <button class="popup__close"><ion-icon name="close-circle-outline" class="popup__close"></ion-icon></button>
+    <p class="popup__text">Форма обратной связи</p>
+    <label class="popup__label" for="popup-input-name">Имя</label>
+    <input class="popup__input" type="text" name="name" id="popup-input-name">
+    <label class="popup__label" for="popup-input-number">Номер телефона</label>
+    <input class="popup__input" type="number" name="number" id="popup-input-number">
+    <label class="popup__label" for="popup-input-tg">Имя пользователя TG (необязательно)</label>
+    <input class="popup__input" type="text" name="telegramm" id="popup-input-tg">
+    <button class="button popup__send">Отправить</button>
+    <p class="popup__warning">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="">условими обработки персональных данных</a></p>
+  </div>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="./utils/constants.js"></script>
+  <script type="module" src="./index.js"></script>
 
 </body>
 </html>

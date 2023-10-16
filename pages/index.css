@@ -51,6 +51,20 @@
 @import url(../blocks/plate/__text/plate__text.css);
 @import url(../blocks/plate/__subtext/plate__subtext.css);
 
+/*-------------=footer=-------------*/
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/author/author.css);
+@import url(../blocks/author/__link/author__link.css);
+
+/*-------------=popup=-------------*/
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_closed/popup_closed.css);
+@import url(../blocks/popup/__close/popup__close.css);
+@import url(../blocks/popup/__text/popup__text.css);
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__label/popup__label.css);
+@import url(../blocks/popup/__send/popup__send.css);
+@import url(../blocks/popup/__warning/popup__warning.css);
 
 
 

@@ -1,0 +1,3 @@
+.popup_closed {
+  transform: translate(0, 100vh);
+}

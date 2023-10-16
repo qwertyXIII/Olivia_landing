@@ -1,0 +1,17 @@
+.popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: max-content;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 400ms ease;
+}
