@@ -1,0 +1,17 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.popup__loading {
+  width: 25px;
+  margin: 0;
+  scale: 0;
+  width: 0;
+  transition: 400ms;
+  animation: rotate 700ms infinite linear;
+}

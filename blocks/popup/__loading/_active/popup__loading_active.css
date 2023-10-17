@@ -1,0 +1,6 @@
+.popup__loading_active {
+  width: 25px;
+  scale: 1;
+  opacity: 1;
+  margin: 0 0 0 30px;
+}

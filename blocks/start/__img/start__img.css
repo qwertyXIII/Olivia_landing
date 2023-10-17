@@ -5,4 +5,12 @@
   outline: 7px white solid;
   background-color: rgba(101, 101, 101, 0.3);
   backdrop-filter: blur(500px);
+  grid-area: image;
+}
+
+@media screen and (min-width: 900px) {
+  .start__img {
+    justify-self: end;
+    transform: translate(-30%, 0%);
+  }
 }

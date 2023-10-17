@@ -3,3 +3,23 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (min-width: 900px) {
+  .contacts {
+    width: max-content;
+    margin: 0 auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-auto-rows: auto;
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "heading heading"
+      "image image"
+      ". ."
+      ". ."
+      ". ."
+      "warning warning";
+      align-items: center;
+      justify-items: center;
+  }
+}

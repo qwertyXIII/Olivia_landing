@@ -23,4 +23,23 @@
   background-color: transparent;
   border-radius: 0;
   border: none;
-} 
+}
+
+
+
+@media screen and (min-width: 720px) {
+  .practices__cards::-webkit-scrollbar {
+    width: 80vw;
+    height: 10px;
+  }
+  
+  .practices__cards::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  .practices__cards::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    border: none;
+  }
+}

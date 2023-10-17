@@ -1,5 +1,6 @@
 .practices__contact {
   width: 90%;
+  max-width: 480px;
   height: 150px;
   margin: 30px auto 0 auto;
   display: flex;

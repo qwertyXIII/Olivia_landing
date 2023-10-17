@@ -12,3 +12,4 @@ export const formInputName = form.querySelector('#popup-input-name');
 export const formInputNumber = form.querySelector('#popup-input-number');
 export const formInputTelegram = form.querySelector('#popup-input-tg');
 export const formSubmit = document.querySelector('.popup__send');
+export const formLoader = document.querySelector('.popup__loading');

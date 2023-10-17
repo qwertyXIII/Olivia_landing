@@ -2,4 +2,15 @@
   color: white;
   font-size: 60px;
   text-align: center;
+  grid-area: name;
+}
+
+@media screen and (min-width: 900px) {
+  .start__heading {
+    text-align: start;
+    font-size: 80px;
+    width: min-content;
+    justify-self: start;
+    transform: translate(-20%, 0%);
+  }
 }
