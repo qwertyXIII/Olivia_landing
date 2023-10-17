@@ -22,6 +22,9 @@
 @import url(../blocks/about/__text/about__text.css);
 @import url(../blocks/about/__img/about__img.css);
 
+/*-------------=particles-js=-------------*/
+@import url(../blocks/particles/particles-js-canvas-el.css);
+
 /*-------------=work=-------------*/
 @import url(../blocks/work/work.css);
 @import url(../blocks/work/__heading/work__heading.css);

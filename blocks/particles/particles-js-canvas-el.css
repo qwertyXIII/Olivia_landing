@@ -1,0 +1,6 @@
+.particles-js-canvas-el {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  width: 100vw;
+}
