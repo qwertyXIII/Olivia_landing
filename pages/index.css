@@ -27,6 +27,7 @@
 @import url(../blocks/work/__card/work__card.css);
 @import url(../blocks/work/__img/work__img.css);
 @import url(../blocks/work/__text/work__text.css);
+@import url(../blocks/work/__text/_bolder/work__text_bolder.css);
 
 /*-------------=practices=-------------*/
 @import url(../blocks/practices/practices.css);
