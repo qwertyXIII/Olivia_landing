@@ -1,3 +1,5 @@
+import { createNotification } from "./components/createNotification.js";
+import { formValidator } from "./components/formValidator.js";
 import { form, formSubmit, popup, popupCloseButton, practicesButtons } from "./utils/constants.js";
 
 popupCloseButton.addEventListener("click", () => {
@@ -12,21 +14,11 @@ practicesButtons.forEach(el => {
 });
 
 formSubmit.addEventListener('click', (e) => {
-  console.log(form);
-
-  form.querySelectorAll('.popup__input').forEach(e => {
-    console.log(e.value);
-  });
-
   e.preventDefault();
-})
-
-
-
-
-
-
-
+  if (formValidator(form, ['popup-input-training', 'popup-input-name', 'popup-input-number'])) {
+    createNotification('ok', `Успешно отправленно! Ожидайте, я связжусь с вами в ближайшее время`);
+  }
+});
 
 particlesJS.load('particles-js', 'utils/particles.json', function() {
   console.log('callback - particles.js config loaded');

@@ -75,8 +75,8 @@
         "mode": "repulse"
       },
       "onclick": {
-        "enable": false,
-        "mode": "push"
+        "enable": true,
+        "mode": "repulse"
       },
       "resize": true
     },

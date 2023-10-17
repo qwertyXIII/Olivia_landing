@@ -197,7 +197,7 @@
     <p class="author">ознакомиться с <a href="./user-agreement.html" target="_blank" class="author__link">Политика конфиденциальности</a></p>
   </footer>
 
-  <div class="popup popup_closed">
+  <popup class="popup popup_closed">
     <button class="popup__close"><ion-icon name="close-circle-outline" class="popup__close"></ion-icon></button>
     <form action="" class="popup__form">
       <p class="popup__text">Форма обратной связи</p>
@@ -226,12 +226,22 @@
       <button class="button popup__send" type="submit">Отправить</button>
       <p class="popup__warning">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="./user-agreement.html" target="_blank">политикой конфиденциальности</a></p>
     </form>
-  </div>
+  </popup>
+
+  <div class="notification-container"></div>
+
+  <template id="template-notification">
+    <div class="content notification">
+      <ion-icon name="" class="notification__icon"></ion-icon>
+      <p class="notification__text"></p>
+    </div>
+  </template>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="./components/particles.min.js"></script>
   <script type="module" src="./utils/constants.js"></script>
+  <script type="module" src="./components/formValidator.js"></script>
   <script type="module" src="./index.js"></script>
 
 </body>

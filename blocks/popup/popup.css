@@ -4,7 +4,9 @@
   left: 0;
   max-height: 95vh;
   width: 100vw;
+  max-width: 450px;
   height: max-content;
+  margin: 0 50%;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -15,4 +17,14 @@
   flex-direction: column;
   align-items: center;
   transition: 800ms ease;
+  outline: 1px solid rgba(211, 211, 211, 0.1);
+  transform: translate(-50%, 0);
+}
+
+
+@media screen and (min-width: 450px) {
+  .popup {
+    border-radius: 30px;
+    bottom: 30px;
+  }
 }

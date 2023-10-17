@@ -1,0 +1,7 @@
+.notification__text {
+  width: calc(100% - 50px);
+  color: white;
+  font-size: 12px;
+  margin: 0;
+  white-space: pre-wrap;
+}

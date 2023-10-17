@@ -1,0 +1,7 @@
+.notification_closed {
+  opacity: 0;
+  transform: translate(200vw, 0);
+  margin: 5px 0;
+  scale: 0;
+  visibility: hidden;
+}

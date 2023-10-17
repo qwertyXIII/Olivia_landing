@@ -1,4 +1,4 @@
 .popup_closed {
-  transform: translate(0, 200vh);
+  transform: translate(-50%, 200vh);
   visibility: hidden;
 }
