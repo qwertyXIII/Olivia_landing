@@ -8,7 +8,7 @@ export function createNotification(type, message) {
   let element = templateNotification.content.querySelector('.content').cloneNode(true);
   switch (type) {
     case 'ok':
-      element.querySelector('.notification__icon').setAttribute("name", "checkmark-circle-outline");
+      element.querySelector('.notification__icon').setAttribute("name", "checkmark-done-circle-outline");
       break;
     case 'error':
       element.querySelector('.notification__icon').setAttribute("name", "alert-circle-outline");
