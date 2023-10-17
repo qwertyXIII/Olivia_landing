@@ -1,10 +1,22 @@
-import { popup, popupCloseButton, practicesButton } from "./utils/constants.js";
-
-
-practicesButton.addEventListener("click", () => {
-  popup.classList.remove('popup_closed');
-})
+import { form, formSubmit, popup, popupCloseButton, practicesButtons } from "./utils/constants.js";
 
 popupCloseButton.addEventListener("click", () => {
   popup.classList.add('popup_closed')
+})
+
+practicesButtons.forEach(el => {
+  el.addEventListener('click', (e) => {
+    popup.classList.remove('popup_closed')
+    form.querySelector('#popup-input-training').value = e.target.getAttribute('content');
+  })
+});
+
+formSubmit.addEventListener('click', (e) => {
+  console.log(form);
+
+  form.querySelectorAll('.popup__input').forEach(e => {
+    console.log(e.value);
+  });
+
+  e.preventDefault();
 })
