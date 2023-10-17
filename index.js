@@ -24,3 +24,7 @@ formSubmit.addEventListener('click', (e) => {
 particlesJS.load('particles-js', 'utils/particles.json', function() {
   console.log('callback - particles.js config loaded');
 });
+
+setTimeout(() => {
+  createNotification('ok','Записывайтесь ко мне на тренинги!')
+}, 30000);

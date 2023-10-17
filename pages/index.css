@@ -84,13 +84,3 @@
 @import url(../blocks/notification/_closed/notification_closed.css);
 @import url(../blocks/notification/__icon/notification__icon.css);
 @import url(../blocks/notification/__text/notification__text.css);
-
-
-
-
-
-
-
-* {
-  outline: 1px solid lime;
-}
