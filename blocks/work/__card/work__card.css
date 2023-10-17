@@ -13,7 +13,7 @@
   content: '';
   width: 350px;
   height: 350px;
-  background-image: url(/images/papka.png);
+  background-image: url(../../../images/papka.png);
   background-size: contain;
   top: 0;
   right: 0;
@@ -25,7 +25,7 @@
   content: '';
   width: 400px;
   height: 400px;
-  background-image: url(/images/kubok.png);
+  background-image: url(../../../images/kubok.png);
   background-size: contain;
   bottom: 0;
   left: 0;

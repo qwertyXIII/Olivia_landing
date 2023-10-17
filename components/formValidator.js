@@ -7,7 +7,7 @@ export function formValidator(form, selectors) {
       setTimeout(() => {
         form.querySelector(`#${e}`).classList.remove('popup__input_wrong')
       }, 2000);
-      createNotification('error', 'Не все поля формы заполнены. Необходимо заполнить все обязательные   поля, чтобы я могля связаться с вами')
+      createNotification('error', 'Не все поля формы заполнены. Необходимо заполнить все обязательные поля, чтобы я могла связаться с вами')
       return false;
     }
   }
