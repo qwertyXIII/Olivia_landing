@@ -28,7 +28,7 @@
         headers: {
             "content-type" : "application/json"
         },
-        body: JSON.strtingify(data)
+        body: JSON.stringify(data)
     };
         fetch(`https://script.google.com/macros/s/${document.querySelector("#key").value}/exec`, options)
             .then(response => response.text())
