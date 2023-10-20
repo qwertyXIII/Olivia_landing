@@ -15,7 +15,10 @@
         <p style="white-space: pre-wrap; color: white;">server answers:</p>
     </div>
     <script>
-    document.querySelector("#send").addEventListener("click", send());
+    document.querySelector("#send").addEventListener("click", () => {
+      console.log("click");
+      send();
+    });
     function send() {
       console.log("Sending...");
       let options = {
