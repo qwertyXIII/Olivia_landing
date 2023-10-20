@@ -3,6 +3,7 @@
   font-size: 60px;
   text-align: center;
   grid-area: name;
+  margin: 0;
 }
 
 @media screen and (min-width: 900px) {

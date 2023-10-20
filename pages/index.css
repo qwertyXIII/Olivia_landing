@@ -60,8 +60,11 @@
 
 /*-------------=footer=-------------*/
 @import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__text/footer__text.css);
+@import url(../blocks/footer/__link/footer__link.css);
+
+/*-------------=footer=-------------*/
 @import url(../blocks/author/author.css);
-@import url(../blocks/author/__link/author__link.css);
 
 /*-------------=popup=-------------*/
 @import url(../blocks/popup/popup.css);
