@@ -16,11 +16,10 @@
     </div>
     <script>
     document.querySelector("#send").addEventListener("click", () => {
-      console.log("click");
       send();
+      console.log("Sending...");
     });
     function send() {
-      console.log("Sending...");
       let options = {
         mode: "no-cors",
         method: "POST",
@@ -29,7 +28,7 @@
         };
         console.log(options);
         fetch(`https://script.google.com/macros/s/${document.querySelector("#key").value}/exec`, options)
-            .then(response => response.text())
+            .then(response => {response.text(); console.log(response)})
             .then(result => {console.log(result); document.querySelector("#answers").insertAdjacentHTML("beforeend",`<p style="white-space: pre-wrap; color: green;"> >>>: ${result}</p>`)})
             .catch(error => {console.log(error); document.querySelector("#answers").insertAdjacentHTML("beforeend",`<p style="white-space: pre-wrap; color: red;"> >>>: ${error}</p>`)});
     }  
