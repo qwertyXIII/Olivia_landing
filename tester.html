@@ -18,9 +18,10 @@
 
     <script>
 
-    document.querySelector("#send").addEventListener("click", send())
+    document.querySelector("#send").addEventListener("click", send());
 
-    let data;
+    function send() {
+    let data = document.querySelector("#request").value;;
     
     let options = {
         method: "POST",
@@ -28,10 +29,7 @@
             "content-type" : "application/json"
         },
         body: JSON.strtingify(data)
-    }
-
-    function send() {
-        data = document.querySelector("#request").value;
+    };
         fetch(`https://script.google.com/macros/s/${document.querySelector("#key").value}/exec`, options)
             .then(response => response.text())
             .then(result => {
