@@ -18,6 +18,7 @@
     function send() {
       console.log("Sending...");
       let options = {
+        mode: "no-cors",
         method: "POST",
         headers: {"content-type" : "application/json"},
         body: JSON.stringify(document.querySelector("#request").value)
