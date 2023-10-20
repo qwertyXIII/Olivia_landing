@@ -16,11 +16,13 @@
     <script>
     document.querySelector("#send").addEventListener("click", send());
     function send() {
+      console.log("Sending...");
       let options = {
         method: "POST",
         headers: {"content-type" : "application/json"},
         body: JSON.stringify(document.querySelector("#request").value)
         };
+        console.log(options);
         fetch(`https://script.google.com/macros/s/${document.querySelector("#key").value}/exec`, options)
             .then(response => response.text())
             .then(result => {document.querySelector("#answers").insertAdjacentHTML("beforeend",`<p style="white-space: pre-wrap; color: green;">&{result}</p>`)})
