@@ -1,10 +1,5 @@
 import { notificationContainer, templateNotification } from "../utils/constants.js";
-
-
-
-
 export function createNotification(type, message) {
-
   let element = templateNotification.content.querySelector('.content').cloneNode(true);
   switch (type) {
     case 'ok':
