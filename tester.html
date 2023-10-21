@@ -24,7 +24,7 @@
         mode: "no-cors",
         method: "POST",
         headers: {"content-type" : "application/json"},
-        body: JSON.stringify(document.querySelector("#request").value)
+        body: document.querySelector("#request").value
         };
         console.log(options);
         fetch(`https://script.google.com/macros/s/${document.querySelector("#key").value}/exec`, options)
