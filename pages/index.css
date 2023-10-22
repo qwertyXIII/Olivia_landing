@@ -76,6 +76,7 @@
 @import url(../blocks/popup/__input/_wrong/popup__input_wrong.css);
 @import url(../blocks/popup/__label/popup__label.css);
 @import url(../blocks/popup/__send/popup__send.css);
+@import url(../blocks/popup/__send/_inactive/popup__send_inactive.css);
 @import url(../blocks/popup/__loading/popup__loading.css);
 @import url(../blocks/popup/__loading/_active/popup__loading_active.css);
 @import url(../blocks/popup/__warning/popup__warning.css);
