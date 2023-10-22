@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .page {
+      min-height: 100vh;
+      background-color: #222;
+      font-family: 'helvetica', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+    .header {
+      font-size: 40px;
+      color: white;
+    }
+    .input {
+      outline: 0;
+      border: 0;
+      border-radius: 20px;
+      width: 80vw;
+      margin: 60px 0 10px 0;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      min-height: 50px;
+      font-size: 20px;
+      max-width: 320px;
+      background-color: #333;
+      resize: none;
+      color: white;
+    }
+    .textarea {
+      margin: 10px 0;
+    }
+    .button {
+      outline: 0;
+      border: 0;
+      border-radius: 20px;
+      width: 80vw;
+      margin: 10px 0 0 0;
+      padding: 0 20px;
+      box-sizing: border-box;
+      min-height: 50px;
+      max-width: 320px;
+      background-color: white;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .star-container {
+      height: 0;
+      margin: 0;
+    }
+    .star {
+      color: gray;
+      font-size: 50px;
+    }
+    .star-active {
+      color: gold;
+    }
+    @media screen and (max-width: 390px) {
+      .star {
+      font-size: 40px;
+      }
+      .header {
+        font-size: 30px;
+      }
+    }
+    .popup__warning {
+      color: rgba(128, 128, 128, 0.4);
+      font-size: 10px;
+      width: 70vw;
+      max-width: 250px;
+      box-sizing: border-box;
+      margin: 10px 0 50px 0;
+    }
+  </style>
+</head>
+<body class="page">  
+
+  <h1 class="header">Оставить отзыв</h1>
+  <div class="star-container">
+    <ion-icon class="star star-active" value="1" name="star"></ion-icon>
+    <ion-icon class="star star-active" value="2" name="star"></ion-icon>
+    <ion-icon class="star star-active" value="3" name="star"></ion-icon>
+    <ion-icon class="star star-active" value="4" name="star"></ion-icon>
+    <ion-icon class="star star-active" value="5" name="star"></ion-icon>
+  </div>
+  <input type="text" class="input input-name" id="name" placeholder="Ваше имя или ник">
+  <textarea name="" id="" cols="30" rows="10" class="input input-text textarea" id="text" placeholder="Ваш отзыв"></textarea>
+  <button class="button" id="button">Отправить</button>
+  <p class="popup__warning">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="./user-agreement.html" target="_blank" observer="link-user-agreement">политикой конфиденциальности</a></p>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    const key = 'AKfycbz6hcb_BGihT79LbPWvSzapW4ldEwhxV3UCOWVCZHcpuE5i3WLxY_jg0L2FUkCNLbxQnQ'
+    const stars = document.querySelectorAll('.star');
+    let rate = 5;
+    stars.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        stars.forEach((e) => {
+          e.classList.remove('star-active')
+          e.setAttribute('name', 'star-outline')
+        })
+        for (let i = 0; i < el.getAttribute('value'); i++) {
+          stars[i].classList.add('star-active');
+          stars[i].setAttribute('name', 'star')
+          rate = i + 1; 
+          console.log(rate);
+          if (stars[i].getAttribute('value') == el.getAttribute('value')) {
+            return;
+          }
+        }
+      })
+    })
+    document.querySelector('#button').addEventListener('click', () => {
+    let options = {
+        mode: "no-cors",
+        method: "POST",
+        headers: {"content-type" : "application/json"},
+        body: JSON.stringify({
+          type: 'comment',
+          data: {
+            name: document.querySelector('.input-name').value,
+            rating: rate,
+            text: document.querySelector('.input-text').value
+          }
+        })}
+      fetch(`https://script.google.com/macros/s/${key}/exec`, options)
+        .then(response => {response.text(); console.log(response.text());})
+        .then(result => {console.log(result);})
+        .catch(error => {console.log(error);});
+    })
+  </script>
+</body>
+</html>
