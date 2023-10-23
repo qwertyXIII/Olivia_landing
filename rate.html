@@ -60,6 +60,7 @@
     .star {
       color: gray;
       font-size: 50px;
+      transition: 300ms;
     }
     .star-active {
       color: gold;
@@ -72,13 +73,36 @@
         font-size: 30px;
       }
     }
-    .popup__warning {
+    .warning {
       color: rgba(128, 128, 128, 0.4);
       font-size: 10px;
       width: 70vw;
       max-width: 250px;
       box-sizing: border-box;
       margin: 10px 0 50px 0;
+    }
+    .thanks {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: black;
+      z-index: 5;
+      transition: 500ms;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .thanks-inactive {
+      visibility: hidden;
+      opacity: 0;
+    }
+    .thanks-text {
+      color: white;
+      font-size: 40px;
+      font-weight: 900;
+      text-align: center;
     }
   </style>
 </head>
@@ -95,25 +119,27 @@
   <input type="text" class="input input-name" id="name" placeholder="Ваше имя или ник">
   <textarea name="" id="" cols="30" rows="10" class="input input-text textarea" id="text" placeholder="Ваш отзыв"></textarea>
   <button class="button" id="button">Отправить</button>
-  <p class="popup__warning">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="./user-agreement.html" target="_blank" observer="link-user-agreement">политикой конфиденциальности</a></p>
+  <p class="warning">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="./user-agreement.html" target="_blank" observer="link-user-agreement">политикой конфиденциальности</a></p>
+
+  <div class="thanks thanks-inactive">
+    <p class="thanks-text">Спасибо за оценку!</p>
+  </div>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script>
     const key = 'AKfycbz6hcb_BGihT79LbPWvSzapW4ldEwhxV3UCOWVCZHcpuE5i3WLxY_jg0L2FUkCNLbxQnQ'
+    const thanks = document.querySelector('.thanks');
     const stars = document.querySelectorAll('.star');
     let rate = 5;
     stars.forEach((el) => {
       el.addEventListener('click', (e) => {
         stars.forEach((e) => {
           e.classList.remove('star-active')
-          e.setAttribute('name', 'star-outline')
         })
         for (let i = 0; i < el.getAttribute('value'); i++) {
           stars[i].classList.add('star-active');
-          stars[i].setAttribute('name', 'star')
-          rate = i + 1; 
-          console.log(rate);
+          rate = i + 1;
           if (stars[i].getAttribute('value') == el.getAttribute('value')) {
             return;
           }
@@ -121,6 +147,7 @@
       })
     })
     document.querySelector('#button').addEventListener('click', () => {
+    thanks.classList.remove('thanks-inactive')
     let options = {
         mode: "no-cors",
         method: "POST",

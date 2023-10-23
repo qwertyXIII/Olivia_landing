@@ -8,6 +8,9 @@ export const practicesButtons = document.querySelectorAll('.practices__button');
 export const templateNotification = document.querySelector('#template-notification');
 export const notificationContainer = document.querySelector('.notification-container');
 
+export const templateReview = document.querySelector('#template-review');
+export const reviewsContainer = document.querySelector('.reviews__container');
+
 export const buttons = document.querySelectorAll('button');
 export const links = document.querySelectorAll('a');
 

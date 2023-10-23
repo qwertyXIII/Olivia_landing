@@ -145,7 +145,7 @@
         <div class="practices__card">
           <img src="./images/inter.png" class="practices__img">
           <p class="practices__name">Интермодальная терапия</p>
-          <p class="practices__text">Терапия творчества</p>
+          <p class="practices__text">Терапия творчеством</p>
           <button class="practices__button button" observer="button-intermodalnaya-terapiya" content="Интермодальная терапия">Записаться</button>
         </div>
         <div class="practices__card">
@@ -164,8 +164,16 @@
       </div>
     </section>
 
+    <section class="reviews">
+      <h4 class="reviews__heading">Отзывы</h4>
+      <p class="reviews__refinements">Показываются 10 последних отзывов</p>
+      <div class="reviews__container">
+      </div>
+      <a class="reviews__button button" href="./rate.html" observer="button-add-review">Оставить отзыв</a>
+    </section>
+
     <section class="contacts">
-      <h4 class="contacts__heading">Мои контакты и социальные сети</h4>
+      <h5 class="contacts__heading">Мои контакты и социальные сети</h5>
       <img src="./images/social.png" class="contacts__img">
       <a class="contacts__plate" href="https://instagram.com/olga_konareva_life?igshid=MzRlODBiNWFlZA==" target="_blank" observer="link-instagram">
         <ion-icon name="logo-instagram" class="plate__icon"></ion-icon>
@@ -198,11 +206,11 @@
   </main>
 
   <footer class="footer">
-    <p class="footer__text">ИНН: 000000000000</p>
-    <p class="footer__text">E-mail: Example@mail.ru</p>
+    <p class="footer__text">ИНН: 702402591395</p>
+    <p class="footer__text">e-mail: olgakonareva03@gmail.com</p>
     <p class="footer__text">Телефон: +7 (952) 181 90-17</p>
     <p class="footer__text">ознакомиться с <a href="./user-agreement.html" target="_blank" class="footer__link">Политикой конфиденциальности</a></p>
-    <p class="footer__text author">Made witch ❤ by <a href="https://t.me/dxiii_tg" class="footer__link" target="_blank">ÐXłłł</a></p>
+    <p class="footer__text author">Made with ❤ by <a href="https://t.me/dxiii_tg" class="footer__link" target="_blank">ÐXłłł</a></p>
   </footer>
 
   <popup class="popup popup_closed">
@@ -242,6 +250,21 @@
     <div class="content notification">
       <ion-icon name="" class="notification__icon"></ion-icon>
       <p class="notification__text"></p>
+    </div>
+  </template>
+
+  <template id="template-review">
+    <div class="content review">
+      <p class="review__name">Имя пользователя</p>
+      <div class="review__stars">
+        <ion-icon class="review__star" name="star"></ion-icon>
+        <ion-icon class="review__star" name="star"></ion-icon>
+        <ion-icon class="review__star" name="star"></ion-icon>
+        <ion-icon class="review__star" name="star"></ion-icon>
+        <ion-icon class="review__star" name="star"></ion-icon>
+        <p class="review__date">22.10.2023</p>
+      </div>
+      <p class="review__text">Текст отзыва</p>
     </div>
   </template>
 

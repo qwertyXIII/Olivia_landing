@@ -1,4 +1,5 @@
 import { createNotification } from "./components/createNotification.js";
+import { createReview } from "./components/createReview.js";
 import { formValidator } from "./components/formValidator.js";
 import { serverDataSender } from "./components/serverDataSender.js";
 import { buttons, form, formInputName, formInputNumber, formInputTelegram, formInputTraining, formLoader, formSubmit, links, popup, popupCloseButton, practicesButtons } from "./utils/constants.js";
@@ -55,3 +56,38 @@ serverDataSender('visit', {userAgent: navigator.userAgent, location: Intl.DateTi
 setTimeout(() => {
   createNotification('ok','Записывайтесь ко мне на тренинги!')
 }, 30000);
+
+
+
+
+
+createReview({
+  name: "name",
+  rate: 1,
+  text: 'TEXT TEXT TEXT',
+  date: "23.10.2023"
+})
+createReview({
+  name: "name",
+  rate: 2,
+  text: 'TEXT TEXT TEXT',
+  date: "23.10.2023"
+})
+createReview({
+  name: "name",
+  rate: 3,
+  text: 'TEXT TEXT TEXT',
+  date: "23.10.2023"
+})
+createReview({
+  name: "name",
+  rate: 4,
+  text: 'TEXT TEXT TEXT',
+  date: "23.10.2023"
+})
+createReview({
+  name: "name",
+  rate: 5,
+  text: 'TEXT TEXT TEXT',
+  date: "23.10.2023"
+})

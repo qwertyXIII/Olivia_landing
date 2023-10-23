@@ -7,7 +7,7 @@
 /*-------------=all elements=-------------*/
 @import url(../blocks/button/button.css);
 
-/*----------.---=start=-------------*/
+/*-------------=start=-------------*/
 @import url(../blocks/start/start.css);
 @import url(../blocks/start/__bg/start__bg.css);
 @import url(../blocks/start/__content/start__content.css);
@@ -45,6 +45,21 @@
 @import url(../blocks/practices/__text/practices__text.css);
 @import url(../blocks/practices/__button/practices__button.css);
 @import url(../blocks/practices/__contact/practices__contact.css);
+
+/*-------------=reviews=-------------*/
+@import url(../blocks/reviews/reviews.css);
+@import url(../blocks/reviews/__heading/reviews__heading.css);
+@import url(../blocks/reviews/__refinements/reviews__refinements.css);
+@import url(../blocks/reviews/__container/reviews__container.css);
+
+/*-------------=review=-------------*/
+@import url(../blocks/review/review.css);
+@import url(../blocks/review/__name/review__name.css);
+@import url(../blocks/review/__date/review__date.css);
+@import url(../blocks/review/__star/review__star.css);
+@import url(../blocks/review/__stars/review__stars.css);
+@import url(../blocks/review/__star/_active/review__star_active.css);
+@import url(../blocks/review/__text/review__text.css);
 
 /*-------------=contacts=-------------*/
 @import url(../blocks/contacts/contacts.css);
