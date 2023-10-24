@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Оставить отзыв</title>
   <style>
     .page {
       min-height: 100vh;
@@ -39,6 +39,34 @@
     .textarea {
       margin: 10px 0;
     }
+    .input-checkbox {
+      cursor: pointer;
+      position: relative;
+    }
+    .input-checkbox::after {
+      position: absolute;
+      top: -3px;
+      right: 0;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: #333;
+      border-radius: 5px;
+      background-position: center;
+      background-size: contain;
+      transition: 200ms;
+      outline: 2px solid #333;
+    }
+    .input-checkbox:checked::after {
+      background-image: url(./images/checkmark.svg);
+    }
+
+    .input-checkbox-label {
+      color: gray;
+      user-select: none;
+      cursor: pointer;
+    }
+
     .button {
       outline: 0;
       border: 0;
@@ -52,6 +80,11 @@
       background-color: white;
       font-size: 20px;
       font-weight: 600;
+      cursor: pointer;
+      transition: 200ms;
+    }
+    .button:hover {
+      scale: 0.95;
     }
     .star-container {
       height: 0;
@@ -61,6 +94,7 @@
       color: gray;
       font-size: 50px;
       transition: 300ms;
+      cursor: pointer;
     }
     .star-active {
       color: gold;
@@ -118,11 +152,15 @@
   </div>
   <input type="text" class="input input-name" id="name" placeholder="Ваше имя или ник">
   <textarea name="" id="" cols="30" rows="10" class="input input-text textarea" id="text" placeholder="Ваш отзыв"></textarea>
+  <div class="checkbox-container">
+    <input class="input-checkbox" type="checkbox" name="checkbox" id="input-checkbox" checked>
+    <label class="input-checkbox-label" for="input-checkbox">Мой отзыв можно опубликовать</label>
+  </div>
   <button class="button" id="button">Отправить</button>
   <p class="warning">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="./user-agreement.html" target="_blank" observer="link-user-agreement">политикой конфиденциальности</a></p>
 
   <div class="thanks thanks-inactive">
-    <p class="thanks-text">Спасибо за оценку!</p>
+    <p class="thanks-text">Спасибо за ваш отзыв!</p>
   </div>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -157,7 +195,8 @@
           data: {
             name: document.querySelector('.input-name').value,
             rating: rate,
-            text: document.querySelector('.input-text').value
+            text: document.querySelector('.input-text').value,
+            distribution: document.querySelector('.input-checkbox').checked
           }
         })}
       fetch(`https://script.google.com/macros/s/${key}/exec`, options)
