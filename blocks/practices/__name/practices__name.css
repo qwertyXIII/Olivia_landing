@@ -5,3 +5,14 @@
   font-weight: 900;
   margin: 10px 0 0 0;
 }
+
+@media screen and (min-width: 420px) {
+  .practices__name {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .practices__name {
+    font-size: 30px;
+  }
+}

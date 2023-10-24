@@ -1,2 +1,4 @@
 .main {
+  scroll-behavior: smooth;
+  transition: 300ms;
 }

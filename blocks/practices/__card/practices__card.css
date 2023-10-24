@@ -1,8 +1,5 @@
 .practices__card {
   background-color: rgba(0, 0, 0, 0.2);
-  min-width: 200px;
-  width: 70vw;
-  max-width: 300px;
   min-height: max-content;
   margin: 0px 10px 10px 10px;
   display: flex;
