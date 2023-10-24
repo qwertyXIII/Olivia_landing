@@ -168,7 +168,7 @@
     <section class="reviews">
       <h4 class="reviews__heading">Отзывы</h4>
       <p class="reviews__refinements">Показываются 10 последних отзывов</p>
-      <div class="reviews__container">
+      <div class="reviews__container" id="masonry">
       </div>
       <a class="reviews__button button" href="./rate.html" observer="button-add-review">Оставить отзыв</a>
     </section>
@@ -263,9 +263,9 @@
         <ion-icon class="review__star" name="star"></ion-icon>
         <ion-icon class="review__star" name="star"></ion-icon>
         <ion-icon class="review__star" name="star"></ion-icon>
-        <p class="review__date">22.10.2023</p>
       </div>
       <p class="review__text">Текст отзыва</p>
+        <p class="review__date">22.10.2023</p>
     </div>
   </template>
 
@@ -274,6 +274,10 @@
   <script src="./components/particles.min.js"></script>
   <script type="module" src="./utils/constants.js"></script>
   <script type="module" src="./components/formValidator.js"></script>
+  <script type="module" src="./components/serverDataLoader.js"></script>
+  <script type="module" src="./components/serverDataSender.js"></script>
+  <script type="module" src="./components/createReview.js"></script>
+  <script type="module" src="./components/createNotification.js"></script>
   <script type="module" src="./index.js"></script>
 
 </body>

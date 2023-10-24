@@ -1,12 +1,13 @@
 import { key } from "../utils/constants.js";
-
-export async function serverDataSender(type, data) {
+export async function serverDataLoader(data) {
   let options = {
-    mode: "no-cors",
+    mode: "cors",
     method: "GET"
   };
-  return fetch(`https://script.google.com/macros/s/${key}/exec`, options)
-    .then(response => {response.text(); console.log(response.text());})
-    .then(result => {return result})
-    .catch(error => {return error});
-  }  
+  return new Promise((resolve, reject) => {
+    fetch(`https://script.google.com/macros/s/${key}/exec?type=${data}`, options)
+      .then(response => response.json())
+      .then(result => resolve(result))
+      .catch(error => reject(error));
+  });
+}  

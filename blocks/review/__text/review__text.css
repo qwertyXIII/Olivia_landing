@@ -3,3 +3,8 @@
   color: lightgray;
   margin: 5px 0 0 0;
 }
+@media screen and (max-width: 400px) {
+  .review__text {
+    font-size: 12px;
+  }
+}

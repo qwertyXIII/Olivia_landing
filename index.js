@@ -2,6 +2,7 @@ import { createNotification } from "./components/createNotification.js";
 import { createReview } from "./components/createReview.js";
 import { formValidator } from "./components/formValidator.js";
 import { serverDataSender } from "./components/serverDataSender.js";
+import { serverDataLoader } from "./components/serverDataLoader.js";
 import { buttons, form, formInputName, formInputNumber, formInputTelegram, formInputTraining, formLoader, formSubmit, links, popup, popupCloseButton, practicesButtons } from "./utils/constants.js";
 
 popupCloseButton.addEventListener("click", () => {
@@ -53,6 +54,14 @@ links.forEach((e) => {
 
 serverDataSender('visit', {userAgent: navigator.userAgent, location: Intl.DateTimeFormat().resolvedOptions().timeZone});
 
+serverDataLoader('review')
+  .then((answer) => {
+    for (let e of answer) {
+      e.date = e.date.slice(0, -14)
+      createReview(e);
+    }
+  })
+
 setTimeout(() => {
   createNotification('ok','Записывайтесь ко мне на тренинги!')
 }, 30000);
@@ -60,34 +69,16 @@ setTimeout(() => {
 
 
 
-
-createReview({
-  name: "name",
-  rate: 1,
-  text: 'TEXT TEXT TEXT',
-  date: "23.10.2023"
-})
-createReview({
-  name: "name",
-  rate: 2,
-  text: 'TEXT TEXT TEXT',
-  date: "23.10.2023"
-})
-createReview({
-  name: "name",
-  rate: 3,
-  text: 'TEXT TEXT TEXT',
-  date: "23.10.2023"
-})
-createReview({
-  name: "name",
-  rate: 4,
-  text: 'TEXT TEXT TEXT',
-  date: "23.10.2023"
-})
-createReview({
-  name: "name",
-  rate: 5,
-  text: 'TEXT TEXT TEXT',
-  date: "23.10.2023"
-})
+///////////////////////////////////////// MASONRY!!!!!!!!
+/*
+setTimeout(() => {
+  console.log("masonry!");
+  var container = document.querySelector('#masonry');
+  var msnry = new Masonry( container, {
+    // Настройки
+    columnWidth: 300,
+    itemSelector: '.review'
+  });
+  
+}, 15000);
+*/

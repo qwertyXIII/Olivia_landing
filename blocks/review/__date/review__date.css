@@ -2,5 +2,6 @@
   color: gray;
   font-size: 10px;
   margin: 0;
-  width: max-content;
+  width: 100%;
+  text-align: end;
 }
