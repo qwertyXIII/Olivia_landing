@@ -3,7 +3,7 @@ import { createReview } from "./components/createReview.js";
 import { formValidator } from "./components/formValidator.js";
 import { serverDataSender } from "./components/serverDataSender.js";
 import { serverDataLoader } from "./components/serverDataLoader.js";
-import { buttons, form, formInputName, formInputNumber, formInputTelegram, formInputTraining, formLoader, formSubmit, links, popup, popupCloseButton, practicesButtons, formInputEmail } from "./utils/constants.js";
+import { buttons, form, formInputName, formInputNumber, formInputTelegram, formInputTraining, formLoader, formSubmit, links, popup, popupCloseButton, practicesButtons, formInputEmail, formInputCheckbox } from "./utils/constants.js";
 
 popupCloseButton.addEventListener("click", () => {
   popup.classList.add('popup_closed')
@@ -22,7 +22,7 @@ formSubmit.addEventListener('click', (e) => {
     formLoader.classList.add('popup__loading_active');
     formSubmit.classList.add('popup__send_inactive');
     formSubmit.disabled = true;
-    serverDataSender('application', {name: formInputName.value, typeOfService: formInputTraining.value, number: formInputNumber.value, telegram: formInputTelegram.value, email: formInputEmail.value, consentToMailing: false})
+    serverDataSender('application', {name: formInputName.value, typeOfService: formInputTraining.value, number: formInputNumber.value, telegram: formInputTelegram.value, email: formInputEmail.value, consentToMailing: formInputCheckbox})
       .then(() => {
         createNotification('ok', `Успешно отправленно! Ожидайте, я связжусь с вами в ближайшее время`);
         formLoader.classList.remove('popup__loading_active');
