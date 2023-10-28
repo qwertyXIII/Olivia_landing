@@ -28,6 +28,7 @@ formSubmit.addEventListener('click', (e) => {
         formLoader.classList.remove('popup__loading_active');
         formSubmit.classList.remove('popup__send_inactive');
         formSubmit.disabled = false;
+        popup.classList.add('popup_closed')
       }).catch(() => {
         createNotification('error', `Что-то пошло не так. Попробуйте позже.`);
         formLoader.classList.remove('popup__loading_active');
