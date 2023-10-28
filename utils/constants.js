@@ -19,5 +19,7 @@ export const formInputTraining = form.querySelector('#popup-input-training');
 export const formInputName = form.querySelector('#popup-input-name');
 export const formInputNumber = form.querySelector('#popup-input-number');
 export const formInputTelegram = form.querySelector('#popup-input-tg');
+export const formInputEmail = form.querySelector('#popup-input-email');
+//export const formInputCheckbox = form.querySelector('#popup-input-Checkbox');
 export const formSubmit = document.querySelector('.popup__send');
 export const formLoader = document.querySelector('.popup__loading');

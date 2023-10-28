@@ -3,7 +3,7 @@ import { createReview } from "./components/createReview.js";
 import { formValidator } from "./components/formValidator.js";
 import { serverDataSender } from "./components/serverDataSender.js";
 import { serverDataLoader } from "./components/serverDataLoader.js";
-import { buttons, form, formInputName, formInputNumber, formInputTelegram, formInputTraining, formLoader, formSubmit, links, popup, popupCloseButton, practicesButtons } from "./utils/constants.js";
+import { buttons, form, formInputName, formInputNumber, formInputTelegram, formInputTraining, formLoader, formSubmit, links, popup, popupCloseButton, practicesButtons, formInputEmail } from "./utils/constants.js";
 
 popupCloseButton.addEventListener("click", () => {
   popup.classList.add('popup_closed')
@@ -18,11 +18,11 @@ practicesButtons.forEach(el => {
 
 formSubmit.addEventListener('click', (e) => {
   e.preventDefault();
-  if (formValidator(form, ['popup-input-training', 'popup-input-name', 'popup-input-number'])) {
+  if (formValidator(form, ['popup-input-training', 'popup-input-name', 'popup-input-number', 'popup-input-email'])) {
     formLoader.classList.add('popup__loading_active');
     formSubmit.classList.add('popup__send_inactive');
     formSubmit.disabled = true;
-    serverDataSender('application', {name: formInputName.value, typeOfService: formInputTraining.value, number: formInputNumber.value, telegram: formInputTelegram.value})
+    serverDataSender('application', {name: formInputName.value, typeOfService: formInputTraining.value, number: formInputNumber.value, telegram: formInputTelegram.value, email: formInputEmail.value, consentToMailing: false})
       .then(() => {
         createNotification('ok', `Успешно отправленно! Ожидайте, я связжусь с вами в ближайшее время`);
         formLoader.classList.remove('popup__loading_active');
@@ -65,20 +65,3 @@ serverDataLoader('review')
 setTimeout(() => {
   createNotification('ok','Записывайтесь ко мне на тренинги!')
 }, 30000);
-
-
-
-
-///////////////////////////////////////// MASONRY!!!!!!!!
-/*
-setTimeout(() => {
-  console.log("masonry!");
-  var container = document.querySelector('#masonry');
-  var msnry = new Masonry( container, {
-    // Настройки
-    columnWidth: 300,
-    itemSelector: '.review'
-  });
-  
-}, 15000);
-*/
