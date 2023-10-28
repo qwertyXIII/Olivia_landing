@@ -22,7 +22,7 @@ formSubmit.addEventListener('click', (e) => {
     formLoader.classList.add('popup__loading_active');
     formSubmit.classList.add('popup__send_inactive');
     formSubmit.disabled = true;
-    serverDataSender('application', {name: formInputName.value, typeOfService: formInputTraining.value, number: formInputNumber.value, telegram: formInputTelegram.value, email: formInputEmail.value, consentToMailing: formInputCheckbox.value})
+    serverDataSender('application', {name: formInputName.value, typeOfService: formInputTraining.value, number: formInputNumber.value, telegram: formInputTelegram.value, email: formInputEmail.value, consentToMailing: formInputCheckbox.checked})
       .then(() => {
         createNotification('ok', `Успешно отправленно! Ожидайте, я связжусь с вами в ближайшее время`);
         formLoader.classList.remove('popup__loading_active');
